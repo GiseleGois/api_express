@@ -6,7 +6,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const dataBase = require('./dataBase')
 
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.json())
 
 app.get('/produtos', (req, res, next) => {
     res.send(dataBase.getProdutos())
